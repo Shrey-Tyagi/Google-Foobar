@@ -1,3 +1,4 @@
+# Seniority 
 However, actually passing out LAMBs isn't easy. Each henchman squad has a strict seniority ranking which must be respected - or else the henchmen will revolt and you'll all get demoted back to minions again! 
 
 There are 4 key rules which you must follow in order to avoid a revolt:
@@ -44,7 +45,7 @@ Solution.solution(10)
 Output:
     1
 ```
-##Solution
+## Solution
 ```
 def solution(total_lambs):
     
@@ -72,30 +73,6 @@ def solution(total_lambs):
     return sol
     
 def solution(total_lambs):
-    
-    Values=[]
-    x=0
-    rt=0
-    while x <= total_lambs:
-        current=2**x
-        Values.append(current)
-        rt=rt + current
-        if rt>total_lambs:
-            break
-        x=x+1
-    least=[1,1]
-    leastTotal=2
-    y=2
-    while y <= total_lambs:
-        temp=least[y-1] + least[y-2]
-        least.append(temp)
-        leastTotal=leastTotal + int(least[y])
-        if leastTotal > total_lambs:
-            break
-        y=y+1
-    sol = len(least) - len(Values)
-    return sol
-    
-#print(solution(143))
+   
 
 ```
